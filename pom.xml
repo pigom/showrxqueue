@@ -3,63 +3,18 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.pigom.reactive</groupId>
-    <artifactId>showrxqueue</artifactId>
+    <artifactId>com.pigom.reactive.showrxqueue</artifactId>
     <name>ShowRXQueue</name>
     <version>0.0.1</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>showrxqserver</module>
+        <module>showrxqui</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <properties>
         <vertx.version>3.4.2</vertx.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-core</artifactId>
-            <version>${vertx.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-redis-client</artifactId>
-            <version>${vertx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web</artifactId>
-            <version>${vertx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.lettuce</groupId>
-            <artifactId>lettuce-core</artifactId>
-            <version>5.0.0.RC2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-unit</artifactId>
-            <version>${vertx.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 </project>
